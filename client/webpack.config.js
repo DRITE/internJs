@@ -9,18 +9,32 @@ module.exports = {
     },
     plugins:[
         new webpack.optimize.UglifyJsPlugin(),
+    ],
+
+    module:{
+        rules: [
+            {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader:'babel-loader',
+                options: {
+                    presets: ['env', 'react']
+                },
+            }
+        },
+        {
+            test: /\.jsx$/,
+            exclude: /node_modules/,
+            use: {
+                loader:'babel-loader',
+                options: {
+                    presets: ['env', 'react']
+                },
+            }
+        },
+    
     ]
+    }
 };
 
-module:{
-    rules: [{
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-            loader:'babel-loader',
-            options: {
-                presets: ['env']
-            },
-        }
-    }]
-}
