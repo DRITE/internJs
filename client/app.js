@@ -2,6 +2,7 @@ import { name } from './user.js'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ReactComponent } from './react-component';
+import PropTypes from 'prop-types';
 
 // ReactDOM.render(
 //     <h1>Hello, world!</h1>,
@@ -34,14 +35,16 @@ class Clock extends React.Component {
     render() {
         return (
             <div>
-                <ReactComponent />
+                <ReactComponent valGH={234} name = {sText} secondName/>
                 <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
             </div>
         );
     }
 }
-
+// secondName = 'ABABABABAAB'
 ReactDOM.render(
     <Clock />,
     document.getElementById('root')
 )
+let sText = 'AAAAAAAAAAAAAA';
+//let sText = 'AAAAAAAAAAAAAA';

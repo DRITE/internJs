@@ -7,9 +7,9 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
-    plugins:[
-        new webpack.optimize.UglifyJsPlugin(),
-    ],
+    // plugins:[
+    //     new webpack.optimize.UglifyJsPlugin(),
+    // ],
 
     module:{
         rules: [
