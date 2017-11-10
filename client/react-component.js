@@ -13,12 +13,11 @@ export class ReactComponent extends React.Component {
         return <div id="new_div">
                     <h1>Hello, YOPTA</h1>
                     <p>I'm {this.props.valGH} {this.props.name}</p>
-                    {secondName ? <p> {this.props.secondName} </p > : <p> Незнакомый </p>}
                 </div>
     }
 }
 ReactComponent.propTypes = {
-    valGH: PropTypes.string,
+    valGH: PropTypes.number,
     name: PropTypes.string
 };
 
